@@ -517,6 +517,21 @@ ol {
   transition: all, 0.7s;
 }
 
+.hero__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz com que o vídeo cubra todo o espaço mantendo a proporção */
+}
+
+
 /*---------------------
   Work
 -----------------------*/
@@ -610,6 +625,13 @@ ol {
 .work__item__hover ul li:last-child:after {
   display: none;
 }
+
+.original-format {
+    object-fit: cover; /* Cobrir o espaço do contêiner */
+    width: 100%; /* Largura total do contêiner */
+    height: 100%; /* Altura total do contêiner */
+}
+
 
 /*---------------------
   Counter
@@ -1125,6 +1147,22 @@ ol {
   display: inline-block;
 }
 
+.testimonial__text {
+  padding: 30px 40px 25px 30px;
+  border: 1px solid #3D3A64;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 9;
+}
+
+.testimonial__text img {
+  width: 300px; /* Define um tamanho fixo para as imagens */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaço extra abaixo da imagem */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+
 /*---------------------
   Services
 -----------------------*/
@@ -1342,6 +1380,50 @@ ol {
   display: inline-block;
   margin-right: 6px;
 }
+
+.portfolio__item__video {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__item__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #fff;
+  z-index: 1;
+}
+
+.portfolio__item {
+  height: 400px; /* Defina a altura desejada */
+}
+
+.portfolio__item {
+  height: 400px; /* Defina a altura desejada */
+  overflow: hidden; /* Evita que a imagem ultrapasse o contêiner */
+}
+
+.portfolio__item__video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio__item__video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /*---------------------
     Blog
@@ -1780,7 +1862,29 @@ ol {
 }
 .contact__form form textarea:focus {
   border-color: #e1e1e1;
+
 }
+
+/* Estilo do botão flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px; /* Distância do fundo da página */
+  right: 20px; /* Distância da margem direita */
+  z-index: 9999; /* Garante que o botão fique sobre os outros elementos */
+}
+
+.whatsapp-float svg {
+  width: 60px; /* Largura do ícone do WhatsApp */
+  height: auto; /* Altura automática */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+  transition: transform 0.3s ease; /* Transição suave */
+}
+
+.whatsapp-float svg:hover {
+  transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+}
+
+
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (min-width: 1200px) {
